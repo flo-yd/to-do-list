@@ -7,12 +7,18 @@ document.getElementById("addItem")!.addEventListener("click", () => {
   const buttonNode = document.createElement('button');
   buttonNode.innerHTML = 'remove'
   buttonNode.className = 'removeButton'
-  const textnode = document.createTextNode(newText);
-  node.appendChild(textnode);
   node.appendChild(buttonNode);
+
+  const textnode = document.createTextNode(newText);
+  const textSpan = document.createElement('span');
+  textSpan.appendChild(textnode);
+  node.appendChild(textSpan);
+ 
+
   const check = document.createElement('input');
   check.type = 'checkbox';
   node.appendChild(check)
+  
   document.getElementById("list")?.appendChild(node);
     
 
@@ -20,11 +26,14 @@ document.getElementById("addItem")!.addEventListener("click", () => {
   function removeParentElement () {
     node.remove();
 }
+check.addEventListener('change', () => {
+    if (check.checked) {
+      textSpan.style.textDecoration = 'line-through';
+    } else {
+      textSpan.style.textDecoration = 'none';
+    }
+  });
 
-  // check.addEventListener('click', crossout)
-  // function crossout () {
-    
-  // }
 }
 )
 

@@ -111,3 +111,8 @@ ul li input[type = checkbox]{
 .checkbox{
   margin: 0;
 }
+
+ul li input[type="checkbox"] {
+  border-style: solid;
+  border-radius: 20px;
+}
