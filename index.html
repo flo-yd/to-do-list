@@ -1,15 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>ToDo List</title>
+    
   </head>
   <body>
+    <p style="background-image: url('cutesy.jpg');"></p>
     <div id="app"></div>
-    <button>Click me</button>
-    <h1>OFF</h1>
+    <h1 class="title">To-Do List! >_&lt;</h1>
+    <div class="inputContainer">
+      <input type="text" id = 'input' placeholder="Add task here"> <button class = 'addItemButton' id = 'addItem'>Add to list</button>
+    </div>
+    <div class="listContainer">
+      <ul id = 'list'></ul>
+    </div>
+    
     <script type="module" src="/src/main.ts"></script>
+    
   </body>
 </html>

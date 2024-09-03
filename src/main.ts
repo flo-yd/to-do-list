@@ -1,36 +1,36 @@
-// import './style.css'
-// import typescriptLogo from './typescript.svg'
-// import viteLogo from '/vite.svg'
-// import { setupCounter } from './counter.ts'
+const list = document.getElementById('list')
 
-// document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://www.typescriptlang.org/" target="_blank">
-//       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-//     </a>
-//     <h1>Vite + TypeScript</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite and TypeScript logos to learn more
-//     </p>
-//   </div>
-// `
+//add
+document.getElementById("addItem")!.addEventListener("click", () => {
+  const newText = (<HTMLInputElement>document.getElementById("input")).value;
+  const node = document.createElement('li');
+  const buttonNode = document.createElement('button');
+  buttonNode.innerHTML = 'remove'
+  buttonNode.className = 'removeButton'
+  const textnode = document.createTextNode(newText);
+  node.appendChild(textnode);
+  node.appendChild(buttonNode);
+  const check = document.createElement('input');
+  check.type = 'checkbox';
+  node.appendChild(check)
+  document.getElementById("list")?.appendChild(node);
+    
 
-// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+  buttonNode.addEventListener('click', removeParentElement )
+  function removeParentElement () {
+    node.remove();
+}
 
-document.querySelector("button")!.addEventListener("click", () => {
-  const h1Element = document.querySelector('h1');
-  const text = h1Element ?. textContent;
+  // check.addEventListener('click', crossout)
+  // function crossout () {
+    
+  // }
+}
+)
 
-  if (text === 'OFF'){
-    h1Element!.textContent = 'ON';
-  }
-  else {
-    h1Element!.textContent = 'OFF';
-  }
-})
+  
+
+
+
+
+
