@@ -8,6 +8,8 @@ body {
 .inputContainer {
   display: flex;
   margin-bottom: 20px;
+  border-radius: 50px;
+  
 }
 
 input{
@@ -21,10 +23,22 @@ input{
   border-style: solid;
 }
 
+.dateTime {
+  border-radius: 10px;
+  border-color: gray;
+  height: 20px;
+  width: 200px;
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-left: 5px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .addItemButton{
   border: 0;
   background-color: lightyellow;
-  color: lightblue;
+  color: lightslategray;
   font-size: 30px;
   padding: 10px;
   border-radius: 40px;
@@ -100,12 +114,12 @@ li {
 }
 
 body {
-  background-image: url('sanrio.jpg');
+  background-color: lightblue;
   background-size: cover;
 }
 
 ul li input[type = checkbox]{
-  border-radius: 10px;
+  width: 30px;
 }
 
 .checkbox{
@@ -115,4 +129,14 @@ ul li input[type = checkbox]{
 ul li input[type="checkbox"] {
   border-style: solid;
   border-radius: 20px;
+}
+
+.date_time {
+  font-size: 22px;
+  
+}
+
+.textSpan{
+  margin-left: 20px;
+  margin-right: 20px;
 }
